@@ -28,3 +28,20 @@ func (uc *UserController) Login() (models.User, error) {
 	}
 	return result, nil
 }
+
+func (uc *UserController) Register() (models.User, error) {
+	var newData models.User
+	fmt.Print("Masukkan Nama ")
+	fmt.Scanln(&newData.Name)
+	fmt.Print("Masukkan Password ")
+	fmt.Scanln(&newData.Password)
+	fmt.Print("Masukkan Email ")
+	fmt.Scanln(&newData.Email)
+	fmt.Print("Masukkan HP ")
+	fmt.Scanln(&newData.Phone)
+	result, err := uc.model.Register(newData)
+	if err != nil && !result {
+		return models.User{}, errors.New("terjadi masalah ketika registrasi")
+	}
+	return newData, nil
+}

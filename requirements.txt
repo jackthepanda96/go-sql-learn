@@ -1,0 +1,6 @@
+Buatlah aplikasi untuk mencatat daftar kegiatan seorang user.
+Fitur:
+1. Aplikasi bisa melakukan login dan register user
+2. Setiap user bisa menambahkan record kegiatan yang akan mereka lakukan
+3. Proses menambahkan hanya bisa dilakukan setelah login
+4. Terdapat fitur untuk mengubah atau menghapus kegiatan. (bisa dilakukan setelah login)

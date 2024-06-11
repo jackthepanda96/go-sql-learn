@@ -12,7 +12,8 @@ type User struct {
 	Password  string
 	Email     string
 	Phone     string
-	BirthDate time.Time
+	BirthDate time.Time `gorm:"type:date"`
+	Todos     []Todo    `gorm:"foreignKey:Owner"`
 }
 
 type UserModel struct {
