@@ -59,6 +59,24 @@ func main() {
 						return
 					}
 					fmt.Println("berhasil menambahkan aktivitas")
+				} else if inputMenu2 == 2 {
+					tc.UpdateTodo(data.ID)
+				} else if inputMenu2 == 3 {
+					_, err := tc.DeleteTodo(data.ID)
+					if err != nil {
+						fmt.Println("error ketika Hapus aktivitas")
+						return
+					}
+					fmt.Println("berhasil Hapus aktivitas")
+					fmt.Println()
+				} else if inputMenu2 == 4 {
+					data, err := tc.FindTodo(data.ID)
+					if err != nil {
+						fmt.Println("error ketika menampilkan daftar aktivitas")
+						return
+					}
+					fmt.Println("berhasil menampilkan daftar aktivitas")
+					fmt.Println(data)
 				}
 			}
 
